@@ -46,36 +46,40 @@ $(document).ready(function () {
 			if(moves[4] == winner) {
 				// Someone moved in the middle square
 				if(moves[0] == winner && moves[8] == winner) {
-					$('body').append($('<div>').addClass('right-diagonal diagonal'));
+					drawLine('right-diagonal diagonal');
 					return winner;
 				} else if(moves[2] == winner && moves[6] == winner) {
-					$('body').append($('<div>').addClass('left-diagonal diagonal'));
+					drawLine('left-diagonal diagonal');
 					return winner;
 				} else if(moves[1] == winner && moves[7] == winner) {
-					$('body').append($('<div>').addClass('middle-vertical vertical'));
+					drawLine('middle-vertical vertical');
 					return winner;
 				} else if(moves[3] == winner && moves[5] == winner) {
-					$('body').append($('<div>').addClass('middle-horizontal horizontal'));
+					drawLine('middle-horizontal horizontal');
 					return winner;
 				} 
 			} else {
 				// check for win on the outsides
 				if(moves[0] == winner && moves[1] == winner && moves[2] == winner) {
-					$('body').append($('<div>').addClass('top horizontal'));
+					drawLine('top horizontal');
 					return winner;
 				} else if(moves[6] == winner && moves[7] == winner && moves[8] == winner) {
-					$('body').append($('<div>').addClass('bottom horizontal'));
+					drawLine('bottom horizontal');
 					return winner;
 				} else if(moves[0] == winner && moves[3] == winner && moves[6] == winner) {
-					$('body').append($('<div>').addClass('left vertical'));
+					drawLine('left vertical');
 					return winner;
 				} else if(moves[2] == winner && moves[5] == winner && moves[8] == winner) {
-					$('body').append($('<div>').addClass('right vertical'));
+					drawLine('right vertical');
 					return winner;
 				} 
 			}
 			return "";
 		}
+	};
+
+	var drawLine = function(cssClass) {
+		$('body').append($('<div>').addClass('line '+cssClass));
 	};
 
 	var resetBoard = function() {

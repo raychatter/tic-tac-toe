@@ -1,5 +1,6 @@
 body {
 	font-family: 'Lato', sans-serif;
+	background-color: #ccc;
 }
 
 #game-container {
@@ -10,6 +11,7 @@ body {
 	width: 312px;
 	height: 312px;
 	margin: 0 auto;
+	border: 1px solid black;
 }
 
 .square {
@@ -41,19 +43,25 @@ body {
 
 .reset-button-div {
 	margin: 10px auto;
-	width: 100px;
+	width: 150px;
+	text-align: center;
 }
 
 #reset {
 	width: 100px;
 	height: 50px;
+	background-color: #ff0;
+	font-size: 1em;
+}
+
+.line {
+	border-top: 4px solid rgba(0,0,0,.5);
+	position: absolute;
+	z-index: 1;
 }
 
 .diagonal {
 	width: 315px;
-	border-top: 4px solid rgba(0,0,0,.5);
-	position: absolute;
-	z-index: 1;
 	top: 160px;
 	left: 200px;
 }
@@ -78,10 +86,7 @@ body {
 
 .vertical {
 	height: 252px;
-	border-left: 4px solid rgba(0,0,0,.5);
-	position: absolute;
 	top: 38px;
-	z-index: 1;
 }
 
 .left {
@@ -97,11 +102,8 @@ body {
 }
 
 .horizontal {
-	width: 252px; /* 20 px on each side */
-	border-top: 4px solid rgba(0,0,0,.5);
-	position: absolute;
+	width: 252px; /* 20 px extra on each side */
 	left: 234px;
-	z-index: 1;
 }
 
 .top {
