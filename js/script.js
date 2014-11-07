@@ -2,6 +2,17 @@ $(document).ready(function () {
 	var playerXturn = true;
 	var numMoves = 0;
 
+	var startNewGame = function() {
+		playerXturn = true;
+		numMoves = 0;
+		$('.square').text("");
+		$('.reset-button-div').nextAll('div').remove();
+		$('.main').html("Player <span id='player'>X</span>'s Turn.</div>");
+		$('.square').bind({
+			click: makeMove
+		});
+	};
+
 	var makeMove = function() {
 		$('.error').text("");
 		if($(this).text()!="") {
@@ -74,7 +85,7 @@ $(document).ready(function () {
 					return winner;
 				} 
 			}
-			return "";
+			return ""; 
 		}
 	};
 
@@ -82,17 +93,6 @@ $(document).ready(function () {
 		$('body').append($('<div>').addClass('line '+cssClass));
 	};
 
-	var resetBoard = function() {
-		$('.square').text("");
-		$('.reset-button-div').nextAll('div').remove();
-		$('.main').html("Player <span id='player'>X</span>'s Turn.</div>");
-		playerXturn = true;
-		numMoves = 0;
-		$('.square').bind({
-			click: makeMove
-		});
-	}
-
-	$('.square').on('click', makeMove);
-	$('#reset').on('click', resetBoard);
+	$('#reset').on('click', startNewGame);
+	startNewGame();
 });
