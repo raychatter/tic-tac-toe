@@ -3,6 +3,10 @@ body {
 	background-color: #ccc;
 }
 
+h1 {
+	text-align: center;
+}
+
 #game-container {
 	display: flex;
 	flex-flow: row wrap;
