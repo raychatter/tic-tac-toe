@@ -39,6 +39,16 @@ body {
 	color: #ff0000;
 }
 
+.reset-button-div {
+	margin: 10px auto;
+	width: 100px;
+}
+
+#reset {
+	width: 100px;
+	height: 50px;
+}
+
 .diagonal {
 	width: 315px;
 	border-top: 4px solid rgba(0,0,0,.5);

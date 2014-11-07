@@ -78,5 +78,14 @@ $(document).ready(function () {
 		}
 	};
 
+	var resetBoard = function() {
+		$('.square').text("");
+		$('.reset-button-div').nextAll('div').remove();
+		$('.main').html("Player <span id='player'>X</span>'s Turn.</div>");
+		playerXturn = true;
+		numMoves = 0;
+	}
+
 	$('.square').on('click', makeMove);
+	$('#reset').on('click', resetBoard);
 });
