@@ -1,0 +1,80 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+#game-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	background-color: #0011ff;
+	width: 312px;
+	height: 312px;
+	margin: 0 auto;
+}
+
+.square {
+	flex: 0 0 100px;
+	height: 100px;
+	background-color: #00bfff;
+	margin-top: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3em;
+}
+
+.top-row {
+	margin-top: 0;
+}
+
+.message {
+	padding-top: 10px;
+	font-size: 1.5em;
+	text-align: center;
+	width: 400px;
+	margin: 0 auto;
+}
+
+.error {
+	color: #ff0000;
+}
+
+#right-diagonal
+{
+	width: 315px;
+	border-top: 4px solid black;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+	top: 160px;
+	left: 200px;
+	z-index: 1;
+	visibility: hidden;
+}
+
+#left-diagonal
+{
+	width: 315px;
+	border-top: 4px solid black;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	transform: rotate(135deg);
+	position: absolute;
+	top: 160px;
+	left: 200px;
+	z-index: 1;
+	visibility: hidden;
+}
+
+#left-vertical {
+	height: 300px;
+	border-left: 4px solid black;
+	position: absolute;
+	top: 50px;
+	left: 250px;
+}
