@@ -46,23 +46,31 @@ $(document).ready(function () {
 			if(moves[4] == winner) {
 				// Someone moved in the middle square
 				if(moves[0] == winner && moves[8] == winner) {
+					$('body').append($('<div>').addClass('right-diagonal diagonal'));
 					return winner;
 				} else if(moves[2] == winner && moves[6] == winner) {
+					$('body').append($('<div>').addClass('left-diagonal diagonal'));
 					return winner;
 				} else if(moves[1] == winner && moves[7] == winner) {
+					$('body').append($('<div>').addClass('middle-vertical vertical'));
 					return winner;
 				} else if(moves[3] == winner && moves[5] == winner) {
+					$('body').append($('<div>').addClass('middle-horizontal horizontal'));
 					return winner;
 				} 
 			} else {
 				// check for win on the outsides
 				if(moves[0] == winner && moves[1] == winner && moves[2] == winner) {
+					$('body').append($('<div>').addClass('top horizontal'));
 					return winner;
 				} else if(moves[6] == winner && moves[7] == winner && moves[8] == winner) {
+					$('body').append($('<div>').addClass('bottom horizontal'));
 					return winner;
 				} else if(moves[0] == winner && moves[3] == winner && moves[6] == winner) {
+					$('body').append($('<div>').addClass('left vertical'));
 					return winner;
 				} else if(moves[2] == winner && moves[5] == winner && moves[8] == winner) {
+					$('body').append($('<div>').addClass('right vertical'));
 					return winner;
 				} 
 			}

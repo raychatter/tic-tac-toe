@@ -39,42 +39,69 @@ body {
 	color: #ff0000;
 }
 
-#right-diagonal
-{
+.diagonal {
 	width: 315px;
-	border-top: 4px solid black;
+	border-top: 4px solid rgba(0,0,0,.5);
+	position: absolute;
+	z-index: 1;
+	top: 160px;
+	left: 200px;
+}
+
+.right-diagonal
+{
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
-	position: absolute;
-	top: 160px;
-	left: 200px;
-	z-index: 1;
-	visibility: hidden;
 }
 
-#left-diagonal
+.left-diagonal
 {
-	width: 315px;
-	border-top: 4px solid black;
 	-webkit-transform: rotate(135deg);
 	-moz-transform: rotate(135deg);
 	-o-transform: rotate(135deg);
 	-ms-transform: rotate(135deg);
 	transform: rotate(135deg);
-	position: absolute;
-	top: 160px;
-	left: 200px;
-	z-index: 1;
-	visibility: hidden;
 }
 
-#left-vertical {
-	height: 300px;
-	border-left: 4px solid black;
+.vertical {
+	height: 252px;
+	border-left: 4px solid rgba(0,0,0,.5);
 	position: absolute;
-	top: 50px;
+	top: 38px;
+	z-index: 1;
+}
+
+.left {
 	left: 250px;
+}
+
+.middle-vertical {
+	left: 356px;
+}
+
+.right {
+	left: 462px;
+}
+
+.horizontal {
+	width: 252px; /* 20 px on each side */
+	border-top: 4px solid rgba(0,0,0,.5);
+	position: absolute;
+	left: 234px;
+	z-index: 1;
+}
+
+.top {
+	top: 58px;
+}
+
+.middle-horizontal {
+	top: 164px;
+}
+
+.bottom {
+	top: 270px;
 }
