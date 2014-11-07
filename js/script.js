@@ -84,6 +84,9 @@ $(document).ready(function () {
 		$('.main').html("Player <span id='player'>X</span>'s Turn.</div>");
 		playerXturn = true;
 		numMoves = 0;
+		$('.square').bind({
+			click: makeMove
+		});
 	}
 
 	$('.square').on('click', makeMove);
