@@ -57,31 +57,31 @@ $(document).ready(function () {
 			if(moves[4] == winner) {
 				// Someone moved in the middle square
 				if(moves[0] == winner && moves[8] == winner) {
-					drawLine('right-diagonal diagonal');
+					// drawLine('right-diagonal diagonal');
 					return winner;
 				} else if(moves[2] == winner && moves[6] == winner) {
-					drawLine('left-diagonal diagonal');
+					// drawLine('left-diagonal diagonal');
 					return winner;
 				} else if(moves[1] == winner && moves[7] == winner) {
-					drawLine('middle-vertical vertical');
+					// drawLine('middle-vertical vertical');
 					return winner;
 				} else if(moves[3] == winner && moves[5] == winner) {
-					drawLine('middle-horizontal horizontal');
+					// drawLine('middle-horizontal horizontal');
 					return winner;
 				} 
 			} else {
 				// check for win on the outsides
 				if(moves[0] == winner && moves[1] == winner && moves[2] == winner) {
-					drawLine('top horizontal');
+					// drawLine('top horizontal');
 					return winner;
 				} else if(moves[6] == winner && moves[7] == winner && moves[8] == winner) {
-					drawLine('bottom horizontal');
+					// drawLine('bottom horizontal');
 					return winner;
 				} else if(moves[0] == winner && moves[3] == winner && moves[6] == winner) {
-					drawLine('left vertical');
+					// drawLine('left vertical');
 					return winner;
 				} else if(moves[2] == winner && moves[5] == winner && moves[8] == winner) {
-					drawLine('right vertical');
+					// drawLine('right vertical');
 					return winner;
 				} 
 			}
